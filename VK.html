@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!-- saved from url=(0015)https://vk.com/ -->
+<html lang="ru"><head class="push_notifier_supported"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="https://vk.com/images/icons/favicons/fav_logo.ico?6">
+
+<link rel="apple-touch-icon" href="https://vk.com/images/icons/pwa/apple/default.png?8">
+
+
+<meta name="description" content="ВКонтакте – универсальное средство для общения и поиска друзей и одноклассников, которым ежедневно пользуются десятки миллионов человек. Мы хотим, чтобы друзья, однокурсники, одноклассники, соседи и коллеги всегда оставались в контакте.">
+
+
+<title>Добро пожаловать | ВКонтакте</title>
+
+<noscript><meta http-equiv="refresh" content="0; URL=/badbrowser.php"></noscript>
+
+<link rel="stylesheet" type="text/css" href="./VK_files/common.css"><link rel="stylesheet" type="text/css" href="./VK_files/base.css"><link rel="stylesheet" type="text/css" href="./VK_files/fonts_utf.css"><link rel="stylesheet" type="text/css" href="./VK_files/fonts_cnt.css">
+
+<script src="./VK_files/sdk.js" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./VK_files/code.js"></script><script id="facebook-jssdk" src="./VK_files/sdk(1).js"></script><script type="text/javascript">
+(function() {
+var alertCont;
+function trackOldBrowserEvent(event) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/badbrowser_stat.php?act=track&event=' + event);
+  xhr.send();
+}
+function exposeGlobals() {
+  window.hideOldBrowser = function() {
+    alertCont.remove();
+    var date = new Date();
+    date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+    var expiresDate = date.toGMTString();
+    var domain = window.locDomain;
+    document.cookie = 'remixoldbshown=1; expires=' + expiresDate + '; path=/' + (domain ? '; domain=.' + domain : '') + ';secure';
+    trackOldBrowserEvent('hideAlert_atom');
+  }
+}
+function checkOldBrowser() {
+  if(!document.body) {
+    setTimeout(checkOldBrowser, 100);
+    return;
+  }
+  try {
+    if (!('noModule' in HTMLScriptElement.prototype)) {
+      exposeGlobals();
+      var alert = '<div class="OldBrowser__container OldBrowser__container--atom" style="width:960px;">  Ваш браузер устарел. Попробуйте <a href="https://vk.com/away.php?to=https%3A%2F%2F1l-go.mail.ru%2Fr%2Fadid%2F3010899_2013344%2Fpid%2F102819%2Fpof%2F1%2Ff%2F3%2F%3F_1larg_sub%3D505002%26utm_source%3Dvk%26rfr%3D505002%20&badbrowser=atom&badbrowser_meta=atom_without_player_badbrowser_alert&" target="_blank">браузер Atom</a>, чтобы работа ВКонтакте была быстрой и стабильной. <a href="https://vk.com/away.php?to=https%3A%2F%2F1l-go.mail.ru%2Fr%2Fadid%2F3010899_2013344%2Fpid%2F102819%2Fpof%2F1%2Ff%2F3%2F%3F_1larg_sub%3D505002%26utm_source%3Dvk%26rfr%3D505002%20&badbrowser=atom&badbrowser_meta=atom_without_player_badbrowser_alert&" target="_blank">Подробнее</a>  <span class="OldBrowser__close" aria-label="Закрыть" role="button" onclick="hideOldBrowser();"></span></div>';
+      alertCont = document.createElement('div');
+      alertCont.className = 'OldBrowser';
+      alertCont.id = 'old_browser_wrap';
+      alertCont.innerHTML = alert;
+      document.body.appendChild(alertCont);
+      trackOldBrowserEvent('showAlert_atom');
+    }
+  } catch(e) {}
+}
+checkOldBrowser();
+})();
+var vk = {
+  ads_rotate_interval: 120000,
+  al: parseInt('3') || 4,
+  id: 0,
+  intnat: '' ? true : false,
+  host: 'vk.com',
+  loginDomain: 'https://login.vk.com/',
+  lang: 0,
+  statsMeta: {"platform":"web2","st":false,"time":1589287455,"hash":"BztpfzvjQJql9pmulq9SJod1O4pT4EHo9Zlfr4RfDPg"},
+  loaderNavSection: '',
+  rtl: parseInt('') || 0,
+  version: 1438202,
+  stDomains: 0,
+  stDomain: '',
+  wsTransport: 'https://stats.vk-portal.net',
+  stExcludedMasks: ["loader_nav","lang"],
+  zero: false,
+  contlen: 13316,
+  loginscheme: 'https',
+  ip_h: 'd8d899bdca62f60c3e',
+  navPrefix: '/',
+  dt: parseInt('0') || 0,
+  fs: parseInt('13') || 13,
+  ts: 1589287455,
+  tz: 10800,
+  pd: 0,
+  css_dir: '',
+  vcost: 7,
+  time: [2020, 5, 12, 15, 44, 15],
+  sampleUser: -1, spentLastSendTS: new Date().getTime(),
+  a11y: 0,
+  statusExportHash: '',
+  audioAdsConfig: {"_":"_"},
+  longViewTestGroup: "every_view",
+  cma: 1,
+  lpConfig: {
+    enabled: 0,
+    key: '',
+    ts: 0,
+    url: '',
+    lpstat: 0
+  },
+
+  pr_tpl: "<div class=\"pr %cls%\" id=\"%id%\"><div class=\"pr_bt\"><\/div><div class=\"pr_bt\"><\/div><div class=\"pr_bt\"><\/div><\/div>",
+  push_hash: 'e32c396eaed8963f47',
+
+  audioInlinePlayerTpl: "<div class=\"audio_inline_player _audio_inline_player no_select\">\n  <div class=\"audio_inline_player_right\">\n    <div class=\"audio_inline_player_volume\"><\/div>\n  <\/div>\n  <div class=\"audio_inline_player_left\">\n    <div class=\"audio_inline_player_progress\"><\/div>\n  <\/div>\n<\/div>",
+
+  pe: {"article_poll":1,"vk_apps_svg_qr":1,"upload.send_upload_stat":1,"push_notifier":1,"audio_search_new_catalog":1,"audio_my_music_new_catalog":1,"story_reactions_web":1,"notify_new_events_box":1,"web_ajax_json_object":1,"mini_apps_web_add_to_favorites":1,"mini_apps_web_add_to_menu":1,"cookie_class_samesite":1,"cookie_secure_default_true":1,"mvk_new_info_snackbar":1,"stickers_bot_link":1,"apps_promo_share_story":1,"widgets_xdm_same_origin":1,"stickers_money_transfer_suggestions":1,"web2_story_box_enabled":1,"bridge_mobile_story_box_enabled":1,"gifts_stickers_preview_tooltips":1,"easy_market_promote_new_payment":1,"navigation_timespent":1,"mvk_mediascope_counter":1,"market_item_recommendations_view_log":1,"market_item_others_view_log":1,"web_stats_transport_story_view":1,"registration_item_stat":1,"notifications_view_new":1,"add_from_field_to_docs_box":1,"ads_market_autopromotion_bookmarks_stats":1},
+  countryISO: 'RU',
+};;vk.rv="24361";;if (!window.constants) { window.constants = {Groups: {
+  GROUPS_ADMIN_LEVEL_USER: 0,
+  GROUPS_ADMIN_LEVEL_MODERATOR: 1,
+  GROUPS_ADMIN_LEVEL_EDITOR: 2,
+  GROUPS_ADMIN_LEVEL_ADMINISTRATOR: 3,
+  GROUPS_ADMIN_LEVEL_HOST: 4,
+  GROUPS_ADMIN_LEVEL_EVENT_CREATOR: 5,
+  GROUPS_ADMIN_LEVEL_CREATOR: 6,
+  GROUPS_ADMIN_PSEUDO_LEVEL_ADVERTISER: 100
+}}; };
+
+window.locDomain = vk.host.match(/[a-zA-Z]+\.[a-zA-Z]+\.?$/)[0];
+var _ua = navigator.userAgent.toLowerCase();
+if (/opera/i.test(_ua) || !/msie 6/i.test(_ua) || document.domain != locDomain) document.domain = locDomain;
+var ___htest = (location.toString().match(/#(.*)/) || {})[1] || '', ___to;
+___htest = ___htest.split('#').pop();
+if (vk.al != 1 && ___htest.length && ___htest.substr(0, 1) == vk.navPrefix) {
+  if (vk.al != 3 || vk.navPrefix != '!') {
+    ___to = ___htest.replace(/^(\/|!)/, '');
+    if (___to.match(/^([^\?]*\.php|login|mobile|away)([^a-z0-9\.]|$)/)) ___to = '';
+    location.replace(location.protocol + '//' + location.host + '/' + ___to);
+  }
+}
+
+var StaticFiles = {
+  'cmodules/web/common_web.js' : {v: '176'},
+  'common.css':{v:69017665896},'base.css':{v:1},'fonts_utf.css':{v:1},'fonts_cnt.css':{v:7802460376}
+  ,'cmodules/bundles/audioplayer.cccb34aa81803f814496.js':{v:'663da0489d454761ddfb'},'cmodules/bundles/common.08b2f452b8ac59d0d97e.js':{v:'54ca4828217b7a5172ad'},'cmodules/web/common_web.4816b80086bbe694bd1b.js':{v:'b610c51a27cec437c9e0b6752aff0d6f'},'lang0_0.js': {v: 26488124},'index.css':{v:24116633826},'cmodules/web/index.86f71dc0d83f06e5cad7.js':{v:'7a54b77dd786a4c9f6f8f78da555649b'},'cmodules/web/index.js':{v:34},'login.css':{v:28588842169},'ui_controls.css':{v:21727058247},'ui_controls.js':{v:3874811298},'cmodules/web/jobs_devtools_notification.ba76ef01a4d969a59278.js':{v:'17edc6d1f20356e2cc3421ff9bccfc45'},'cmodules/web/jobs_devtools_notification.js':{v:1},'cmodules/web/page_layout.769a6716233a1d1139e2.js':{v:'10406d3eb0895afc407a'},'cmodules/web/page_layout.js':{v:1},'cmodules/bundles/40078178da81a2a294c33d2feddcc76c.c915517bdbe775e067fa.js':{v:'2f0d722d45fea38e8e1b'},'cmodules/bundles/2bddcf8eba73bbb0902e1b2f9d33962b.7a534ccb21b729cb117f.js':{v:'eb2a1f6a7c004fd13ab4'},'cmodules/web/ui_common.4d1946e18a345dc84619.js':{v:'cf746d6132fd712f7936842c8d5c8dcd'},'ui_common.js':{v:6},'ui_common.css':{v:18870796106},'cmodules/bundles/f8a3b0b69a90b5305d627c89f0bd674e.288986cdaa327c4a94de.js':{v:'65ac01b567f2e58e4e6a'},'cmodules/web/likes.440b10424b77f2876892.js':{v:'c3b848817e837bb7c455f11dd7745c16'},'cmodules/web/likes.js':{v:1}
+}
+var abp;
+</script>
+
+<link type="text/css" rel="stylesheet" href="./VK_files/index.css"><link type="text/css" rel="stylesheet" href="./VK_files/login.css"><link type="text/css" rel="stylesheet" href="./VK_files/ui_controls.css"><link type="text/css" rel="stylesheet" href="./VK_files/ui_common.css"><script type="text/javascript" src="./VK_files/loader_nav1438202_0.js"></script><script type="text/javascript" src="./VK_files/audioplayer.cccb34aa81803f814496.js"></script><script type="text/javascript" src="./VK_files/common.08b2f452b8ac59d0d97e.js"></script><script type="text/javascript" src="./VK_files/common_web.4816b80086bbe694bd1b.js"></script><script type="text/javascript" src="./VK_files/lang0_0.js"></script><script type="text/javascript" src="./VK_files/px.js"></script><script type="text/javascript" src="./VK_files/px(1).js"></script><link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.vk.com/"><link rel="alternate" href="android-app://com.vkontakte.android/vkontakte/m.vk.com/"><meta name="google-site-verification" content="CNjLCRpSR2sryzCC4NQKKCL5WnvmBTaag2J_UlTyYeQ"><meta name="yandex-verification" content="798f8402854bea07"><script type="text/javascript" src="./VK_files/index.86f71dc0d83f06e5cad7.js"></script><script type="text/javascript" src="./VK_files/ui_controls.js"></script><script type="text/javascript" src="./VK_files/jobs_devtools_notification.ba76ef01a4d969a59278.js"></script><script type="text/javascript" src="./VK_files/page_layout.769a6716233a1d1139e2.js"></script><script type="text/javascript" src="./VK_files/40078178da81a2a294c33d2feddcc76c.c915517bdbe775e067fa.js"></script><script type="text/javascript" src="./VK_files/2bddcf8eba73bbb0902e1b2f9d33962b.7a534ccb21b729cb117f.js"></script><script type="text/javascript" src="./VK_files/ui_common.4d1946e18a345dc84619.js"></script><script type="text/javascript" src="./VK_files/f8a3b0b69a90b5305d627c89f0bd674e.288986cdaa327c4a94de.js"></script><script type="text/javascript" src="./VK_files/likes.440b10424b77f2876892.js"></script>
+
+<script src="./VK_files/abc_light.00d79e596142503571a7.js"></script><script src="./VK_files/tooltips.0f2db9f59811a7f335a0.js"></script><link rel="stylesheet" type="text/css" href="./VK_files/tooltips.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+
+<body onresize="onBodyResize()" class="index_page no_stl no_sett" data-useragent="chrome windows7">
+  <div id="system_msg" class="fixed"></div>
+  <div id="utils"></div>
+
+  <div id="layer_bg" class="fixed" style="height: 1074px;"></div><div id="layer_wrap" class="scroll_fix_wrap fixed layer_wrap" style="width: 912px; height: 1074px;"><div id="layer" style="width: 894px;"></div></div>
+  <div id="box_layer_bg" class="fixed" style="height: 1074px;"></div><div id="box_layer_wrap" class="scroll_fix_wrap fixed" style="width: 912px; height: 1074px;"><div id="box_layer" style="width: 894px;"><div id="box_loader"><div class="pr pr_baw pr_medium" id="box_loader_pr"><div class="pr_bt"></div><div class="pr_bt"></div><div class="pr_bt"></div></div><div class="back"></div></div></div></div>
+
+  <div id="stl_left" style="width: 0px;"><div id="stl_bg"><nobr id="stl_text">Наверх</nobr></div></div><div id="stl_side" style="left: 0px; width: 10px; top: 42px; height: 1032px;"></div>
+
+  <script type="text/javascript">window.domStarted && domStarted();</script>
+
+  <div class="scroll_fix_wrap _page_wrap" id="page_wrap"><div><div class="scroll_fix" style="width: 960px;">
+  
+
+  <div id="page_header_cont" class="page_header_cont">
+    <div class="back"></div>
+    <div id="page_header_wrap" class="page_header_wrap" style="width: 960px;">
+      <a class="top_back_link" href="https://vk.com/" id="top_back_link" onclick="if (nav.go(this, event, {back: true}) === false) { showBackLink(); return false; }" style="max-width: 1209px;"></a>
+      <div id="page_header" class="p_head p_head_l0" style="width: 960px">
+        <div class="content">
+          <div id="top_nav" class="head_nav">
+  <div class="head_nav_item fl_l"><a class="top_home_link fl_l CovidLogo" href="https://vk.com/" aria-label="На главную" accesskey="1" onmouseover="this.className.indexOf(&#39;bugtracker_logo&#39;) === -1 &amp;&amp; bodyNode.className.indexOf(&#39;WideScreenAppPage&#39;) === -1 &amp;&amp; showTooltip(this,
+{
+  text: &quot;&lt;div class=\&quot;CovidTooltip__logo\&quot;&gt;&lt;\/div&gt;&lt;div class=\&quot;CovidTooltip__title\&quot;&gt;Оставайтесь дома&lt;\/div&gt;&lt;div class=\&quot;CovidTooltip__text\&quot;&gt;Мойте руки, избегайте скопления людей, по возможности не выходите из дома и проводите &lt;a href=\&quot;\/feed?section=stayhome\&quot; onclick=\&quot;return typeof window.statlogsValueEvent !== &amp;#39;undefined&amp;#39; &amp;amp;&amp;amp; window.statlogsValueEvent(&amp;#39;coronavirus_tooltip_click&amp;#39;, 1) || nav.go(this, event)\&quot;&gt;время с пользой&lt;\/a&gt;.&lt;\/div&gt;&quot;,
+  className: &#39;CovidTooltip&#39;,
+  width: 356,
+  dir: &#39;top&#39;,
+  shift: [0, 0, 6],
+  hidedt: 60, showdt: 600,
+  hasover: true,
+  onShowStart: function() {window.statlogsValueEvent !== &#39;undefined&#39; &amp;&amp; window.statlogsValueEvent(&#39;coronavirus_tooltip_show&#39;, 1)}
+})"><div class="top_home_logo"></div><div class="CovidLogo__hashtag ">#лучшедома</div></a></div>
+  <div class="head_nav_item fl_l"><div id="ts_wrap" class="ts_wrap" onmouseover="TopSearch.initFriendsList();">
+  <input name="disable-autofill" style="display: none;">
+  <div class="input_back_wrap no_select"><div class="input_back" style="margin: 7px 0px 7px 8px; padding: 6px 6px 6px 19px;"><div class="input_back_content" style="width: 210px;">Поиск</div></div></div><input type="text" onmousedown="event.cancelBubble = true;" ontouchstart="event.cancelBubble = true;" class="text ts_input" id="ts_input" autocomplete="off" name="disable-autofill" aria-label="Поиск">
+</div></div>
+  <div class="head_nav_item fl_l head_nav_btns"><div id="top_audio_layer_place" class="top_audio_layer_place"></div></div>
+  <div class="head_nav_item fl_r"><a class="top_nav_link" href="https://vk.com/" id="top_switch_lang" style="" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 3, hash: &#39;d985e043dbe3c2d182&#39; }); return false;">
+  Switch to English
+</a><a class="top_nav_link" href="https://vk.com/join" id="top_reg_link" style="display: none" onclick="return !showBox(&#39;join.php&#39;, {act: &#39;box&#39;, from: nav.strLoc}, {}, event)">
+  регистрация
+</a></div>
+  <div class="head_nav_item_player"></div>
+</div>
+<div id="ts_cont_wrap" class="ts_cont_wrap" ontouchstart="event.cancelBubble = true;" onmousedown="event.cancelBubble = true;"></div>
+        </div>
+      <div class="tt_w tt_default CovidTooltip" style="display: none; position: absolute;"><div class="wrapped"><div class="tt_text"><div class="CovidTooltip__logo"></div><div class="CovidTooltip__title">Оставайтесь дома</div><div class="CovidTooltip__text">Мойте руки, избегайте скопления людей, по&nbsp;возможности не&nbsp;выходите из&nbsp;дома и&nbsp;проводите <a href="https://vk.com/feed?section=stayhome" onclick="return typeof window.statlogsValueEvent !== &#39;undefined&#39; &amp;&amp; window.statlogsValueEvent(&#39;coronavirus_tooltip_click&#39;, 1) || nav.go(this, event)">время&nbsp;с&nbsp;пользой</a>.</div></div></div></div></div>
+    </div>
+  </div>
+
+  <div id="page_layout" style="width: 960px;">
+    <div id="side_bar" class="side_bar fl_l  sticky_top_force" style="display: none; top: 0px;">
+      <div id="side_bar_inner" class="side_bar_inner">
+        <div id="quick_login" class="quick_login">
+  <div><iframe class="upload_frame" id="quick_login_frame" name="quick_login_frame" src="./VK_files/saved_resource.html"></iframe></div><form method="POST" name="login" id="quick_login_form" action="https://login.vk.com/?act=login" target="quick_login_frame">
+    <input type="hidden" name="act" value="login">
+    <input type="hidden" name="role" value="al_frame">
+    <input type="hidden" name="expire" id="quick_expire_input" value="">
+    <input type="hidden" name="to" id="quick_login_to" value="aW5kZXgucGhw">
+    <input type="hidden" name="recaptcha" id="quick_recaptcha" value="">
+    <input type="hidden" name="captcha_sid" id="quick_captcha_sid" value="">
+    <input type="hidden" name="captcha_key" id="quick_captcha_key" value="">
+    <input type="hidden" name="_origin" value="https://vk.com">
+    <input type="hidden" name="ip_h" value="d8d899bdca62f60c3e">
+    <input type="hidden" name="lg_h" value="5b99f00b1cf4ace240">
+    <input type="hidden" name="ul" id="quick_login_ul" value="">
+    <div class="label">Телефон или email</div>
+    <div class="labeled"><input type="text" name="email" class="dark" id="quick_email"></div>
+    <div class="label">Пароль</div>
+    <div class="labeled"><input type="password" name="pass" class="dark" id="quick_pass" onkeyup="toggle(&#39;quick_expire&#39;, !!this.value);toggle(&#39;quick_forgot&#39;, !this.value)"></div>
+    <input type="submit" class="submit">
+  </form>
+  <button class="quick_login_button flat_button button_wide" id="quick_login_button">Войти</button>
+  <button class="quick_reg_button flat_button button_wide" id="quick_reg_button" style="display: none" onclick="top.showBox(&#39;join.php&#39;, {act: &#39;box&#39;, from: nav.strLoc})">Регистрация</button>
+  <div class="clear forgot"><div class="checkbox" id="quick_expire" onclick="checkbox(this);ge(&#39;quick_expire_input&#39;).value=isChecked(this)?1:&#39;&#39;;" role="checkbox" aria-checked="false" tabindex="0">Чужой компьютер</div><a id="quick_forgot" class="quick_forgot" href="https://vk.com/restore" target="_top">Забыли пароль?</a></div>
+</div>
+      </div>
+    </div>
+
+    <div id="page_body" class="fl_r " style="width: 960px;">
+      
+      <div id="wrap_between"></div>
+      <div id="wrap3" style=""><div id="wrap2" style="">
+  <div id="wrap1" style="">
+    <div id="content" style=""><div id="index_rcolumn" class="index_rcolumn">
+  <div id="index_login" class="page_block index_login">
+    <form method="post" name="login" id="index_login_form" action="https://login.vk.com/?act=login">
+      <input type="hidden" name="act" id="act" value="login">
+      <input type="hidden" name="role" value="al_frame">
+      <input type="hidden" name="expire" id="index_expire_input" value="">
+      <input type="hidden" name="_origin" value="https://vk.com">
+      <input type="hidden" name="ip_h" value="d8d899bdca62f60c3e">
+      <input type="hidden" name="lg_h" value="19eda8c4171a81d86b">
+      <input type="text" class="big_text" name="email" id="index_email" value="" placeholder="Телефон или email">
+      <input type="password" class="big_text" name="pass" id="index_pass" value="" placeholder="Пароль" onkeyup="toggle(&#39;index_expire&#39;, !!this.value);toggle(&#39;index_forgot&#39;, !this.value)">
+      <button id="index_login_button" class="index_login_button flat_button button_big_text">Войти</button>
+      <div class="forgot">
+        <div class="checkbox" id="index_expire" onclick="checkbox(this);ge(&#39;index_expire_input&#39;).value=isChecked(this)?1:&#39;&#39;;" role="checkbox" aria-checked="false" tabindex="0">Чужой компьютер</div>
+        <a id="index_forgot" class="index_forgot" href="https://vk.com/restore" target="_top">Забыли пароль?</a>
+      </div>
+    </form>
+  </div>
+  <div id="ij_form" class="page_block ij_form">
+    <h2 class="ij_header">Впервые ВКонтакте?</h2>
+    <div class="ij_subheader">Моментальная регистрация</div>
+    <div id="ij_msg"></div>
+    <input type="text" class="big_text" id="ij_first_name" value="" placeholder="Ваше имя">
+    <input type="text" class="big_text" id="ij_last_name" value="" placeholder="Ваша фамилия">
+    <div class="ij_label">Дата рождения<span class="hint_icon" data-title="&lt;b&gt;Заполненная дата рождения&lt;/b&gt; позволит друзьям легче найти Вас, а также подбирать для Вас интересные материалы.&lt;br&gt;Вы сможете всегда настроить видимость Вашей даты рождения в редактировании профиля." onmouseover="showHint(this);"></span></div>
+    <div id="ij_birthdate_row" class="ij_birthdate_row clear_fix">
+      <div class="ij_bday"><div id="container1" class="selector_container dropdown_container big big_text limited_height" style="width: 75px;"><table cellspacing="0" cellpadding="0" class="selector_table">       <tbody><tr>         <td class="selector">           <div class="placeholder_wrap1" style="display: none;">             <div class="placeholder_wrap2">               <div class="placeholder_content" aria-hidden="true" style="color: rgb(124, 127, 130);"></div>               <div class="placeholder_cover"></div>             </div>           </div><div class="selected_items_wrap"><div class="scroll_fader_top"></div>            <span class="selected_items"></span>            <div class="scroll_fader_bottom"></div></div>            <input type="text" class="selector_input selected" readonly="true" style="color: rgb(124, 127, 130); width: 35px;">            <input type="hidden" name="selectedItems" id="selectedItems" value="0" class="resultField">            <input type="hidden" name="selectedItems_custom" id="selectedItems_custom" value="" class="customField">          </td><td id="dropdown1" class="selector_dropdown" role="button" aria-hidden="true" style="width: 26px;">&nbsp;</td>        </tr>     </tbody></table>    <div class="results_container">      <div class="result_list dividing_line" style="display: none; opacity: 1; width: 75px;"><ul id="list_options_container_1"></ul></div>    </div></div></div>
+      <div class="ij_bmonth"><div id="container2" class="selector_container dropdown_container big big_text limited_height" style="width: 100px;"><table cellspacing="0" cellpadding="0" class="selector_table">       <tbody><tr>         <td class="selector">           <div class="placeholder_wrap1" style="display: none;">             <div class="placeholder_wrap2">               <div class="placeholder_content" aria-hidden="true" style="color: rgb(124, 127, 130);"></div>               <div class="placeholder_cover"></div>             </div>           </div><div class="selected_items_wrap"><div class="scroll_fader_top"></div>            <span class="selected_items"></span>            <div class="scroll_fader_bottom"></div></div>            <input type="text" class="selector_input selected" readonly="true" style="color: rgb(124, 127, 130); width: 60px;">            <input type="hidden" name="selectedItems" id="selectedItems" value="0" class="resultField">            <input type="hidden" name="selectedItems_custom" id="selectedItems_custom" value="" class="customField">          </td><td id="dropdown2" class="selector_dropdown" role="button" aria-hidden="true" style="width: 26px;">&nbsp;</td>        </tr>     </tbody></table>    <div class="results_container">      <div class="result_list dividing_line" style="display: none; opacity: 1; width: 100px;"><ul id="list_options_container_2"></ul></div>    </div></div></div>
+      <div class="ij_byear"><div id="container3" class="selector_container dropdown_container big big_text limited_height" style="width: 75px;"><table cellspacing="0" cellpadding="0" class="selector_table">       <tbody><tr>         <td class="selector">           <div class="placeholder_wrap1" style="display: none;">             <div class="placeholder_wrap2">               <div class="placeholder_content" aria-hidden="true" style="color: rgb(124, 127, 130);"></div>               <div class="placeholder_cover"></div>             </div>           </div><div class="selected_items_wrap"><div class="scroll_fader_top"></div>            <span class="selected_items"></span>            <div class="scroll_fader_bottom"></div></div>            <input type="text" class="selector_input selected" readonly="true" style="color: rgb(124, 127, 130); width: 35px;">            <input type="hidden" name="selectedItems" id="selectedItems" value="0" class="resultField">            <input type="hidden" name="selectedItems_custom" id="selectedItems_custom" value="" class="customField">          </td><td id="dropdown3" class="selector_dropdown" role="button" aria-hidden="true" style="width: 26px;">&nbsp;</td>        </tr>     </tbody></table>    <div class="results_container">      <div class="result_list dividing_line" style="display: none; opacity: 1; width: 75px;"><ul id="list_options_container_3"></ul></div>    </div></div></div>
+    </div>
+    <div id="ij_sex_row" class="clear_fix unshown">
+      <div class="ij_label">Ваш пол</div>
+      <div class="radiobtn" onclick="radiobtn(this, 1, &#39;ij_sex&#39;);" role="radio" aria-checked="false" tabindex="0">Женский</div>
+      <div class="radiobtn" onclick="radiobtn(this, 2, &#39;ij_sex&#39;);" role="radio" aria-checked="false" tabindex="-1">Мужской</div>
+    </div>
+    <button class="flat_button button_wide button_big_text ij_button" id="ij_submit" onclick="Index.submitJoinStart()">Продолжить регистрацию</button>
+    <div id="index_fbcontinuewithsign" class="FacebookLogin FacebookLogin--index FacebookLogin--noNative" style="opacity: 1; height: 55px; overflow: hidden; display: block;">
+      <div class="FacebookLogin__button fb-login-button fb_iframe_widget" onclick="return Index.fbJoin();" data-use-continue-as="true" data-width="264" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-placeholder="Войти через Facebook" login_text="" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=128749580520227&amp;button_type=continue_with&amp;container_width=270&amp;locale=ru_RU&amp;max_rows=1&amp;sdk=joey&amp;size=medium&amp;use_continue_as=true&amp;width=264"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f2c1897905ad35c" width="264px" height="1000px" data-testid="fb:login_button Facebook Social Plugin" title="fb:login_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./VK_files/login_button.html" class="" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div>
+    </div>
+  </div>
+</div>
+<div class="index_users_wrap page_block clear_fix">
+  <div class="index_users_header">Недавно входили на сайт с этого компьютера</div>
+  <div class="index_users_info">Чтобы войти снова, нажмите на фотографию или имя.</div>
+  <div class="index_users">
+    <a class="index_new_user_row index_user_row _row inl_bl" id="index_new_user_row" onclick="return Index.showLoginBox();">
+  <div class="index_user_ph"></div>
+  <div class="index_user_name">Войти в другой аккаунт</div>
+</a>
+  </div>
+</div><div class="login_compact_mobile_promo page_block">
+  <img src="./VK_files/compact_mobile_promo.png" srcset="/images/login/compact_mobile_promo.png, /images/login/compact_mobile_promo_2x.png 2x" width="350" height="200" class="login_compact_mobile_promo_picture">
+  <h2 class="login_compact_mobile_promo_title">ВКонтакте для&nbsp;мобильных устройств</h2>
+  <div class="login_compact_mobile_promo_text">Скачать для&nbsp;<a href="https://itunes.apple.com/ru/app/id564177498">iPhone</a> или&nbsp;<a href="https://play.google.com/store/apps/details?id=com.vkontakte.android">Android</a></div>
+</div>
+<div class="clear"></div>
+<div id="index_footer_wrap" class="footer_wrap index_footer_wrap">
+  <div class="footer_nav" id="bottom_nav">
+  <div class="footer_copy"><a href="https://vk.com/about">ВКонтакте</a> © 2006–2020</div>
+  <div class="footer_links">
+    <a class="bnav_a" href="https://vk.com/about">О ВКонтакте</a>
+    <a class="bnav_a" href="https://vk.com/support?act=home" style="display: none;">Помощь</a>
+    <a class="bnav_a" href="https://vk.com/terms">Правила</a>
+    <a class="bnav_a" href="https://vk.com/ads" style="">Реклама</a>
+    
+    <a class="bnav_a" href="https://vk.com/dev">Разработчикам</a>
+    <a class="bnav_a" href="https://vk.com/jobs" style="display: none;">Вакансии</a>
+  </div>
+  <div class="footer_lang"><a class="footer_lang_link" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 0, hash: &#39;d985e043dbe3c2d182&#39;})">Русский</a><a class="footer_lang_link" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 1, hash: &#39;d985e043dbe3c2d182&#39;})">Українська</a><a class="footer_lang_link" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 3, hash: &#39;d985e043dbe3c2d182&#39;})">English</a><a class="footer_lang_link" onclick="if (vk.al) { showBox(&#39;lang.php&#39;, {act: &#39;lang_dialog&#39;, all: 1}, {params: {dark: true, bodyStyle: &#39;padding: 0px&#39;}, noreload: true}); } else { changeLang(1); } return false;">все языки »</a></div>
+</div>
+
+<div class="footer_bench clear">
+  
+</div>
+</div><div class="tt_w tt_black tt_down" style="position: absolute; opacity: 1; top: 85px; left: 168px; display: none;"><div class="tt_text">Удалить с этой страницы</div></div></div>
+  </div>
+</div></div>
+    </div>
+
+    <div id="footer_wrap" class="footer_wrap fl_r" style="width: 960px;"><div class="footer_nav" id="bottom_nav">
+  <div class="footer_copy"><a href="https://vk.com/about">ВКонтакте</a> © 2006–2020</div>
+  <div class="footer_links">
+    <a class="bnav_a" href="https://vk.com/about">О ВКонтакте</a>
+    <a class="bnav_a" href="https://vk.com/support?act=home" style="display: none;">Помощь</a>
+    <a class="bnav_a" href="https://vk.com/terms">Правила</a>
+    <a class="bnav_a" href="https://vk.com/ads" style="">Реклама</a>
+    
+    <a class="bnav_a" href="https://vk.com/dev">Разработчикам</a>
+    <a class="bnav_a" href="https://vk.com/jobs" style="display: none;">Вакансии</a>
+  </div>
+  <div class="footer_lang"><a class="footer_lang_link" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 0, hash: &#39;d985e043dbe3c2d182&#39;})">Русский</a><a class="footer_lang_link" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 1, hash: &#39;d985e043dbe3c2d182&#39;})">Українська</a><a class="footer_lang_link" onclick="ajax.post(&#39;al_index.php&#39;, {act: &#39;change_lang&#39;, lang_id: 3, hash: &#39;d985e043dbe3c2d182&#39;})">English</a><a class="footer_lang_link" onclick="if (vk.al) { showBox(&#39;lang.php&#39;, {act: &#39;lang_dialog&#39;, all: 1}, {params: {dark: true, bodyStyle: &#39;padding: 0px&#39;}, noreload: true}); } else { changeLang(1); } return false;">все языки »</a></div>
+</div>
+
+<div class="footer_bench clear">
+  
+</div></div>
+
+    <div class="clear"></div>
+  </div>
+</div></div><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2579437;js=na" style="border:0;" height="1" width="1" />
+</div></noscript></div>
+  <div class="progress" id="global_prg"></div>
+
+  <script type="text/javascript">
+    if (parent && parent != window && (browser.msie || browser.opera || browser.mozilla || browser.chrome || browser.safari || browser.iphone)) {
+      document.getElementsByTagName('body')[0].innerHTML = '';
+    } else {
+      window.domReady && domReady();
+      updateMoney(0);
+initPageLayoutUI();
+if (browser.iphone || browser.ipad || browser.ipod) {
+  setStyle(bodyNode, {webkitTextSizeAdjust: 'none'});
+}var qf = ge('quick_login_form'), ql = ge('quick_login'), qe = ge('quick_email'), qp = ge('quick_pass');
+var qlb = ge('quick_login_button'), prgBtn = qlb;
+
+var qinit = function() {
+  setTimeout(function() {
+    ql.insertBefore(ce('div', {innerHTML: '<iframe class="upload_frame" id="quick_login_frame" name="quick_login_frame"></iframe>'}), qf);
+    qf.target = 'quick_login_frame';
+    qe.onclick = loginByCredential;
+    qp.onclick = loginByCredential;
+  }, 1);
+}
+
+if (window.top && window.top != window) {
+  window.onload = qinit;
+} else {
+  setTimeout(qinit, 0);
+}
+
+qf.onsubmit = function() {
+  if (!ge('quick_login_frame')) return false;
+  if (!val('quick_login_ul') && !trim(qe.value)) {
+    notaBene(qe);
+    return false;
+  } else if (!trim(qp.value)) {
+    notaBene(qp);
+    return false;
+  }
+  lockButton(window.__qfBtn = prgBtn);
+  prgBtn = qlb;
+  clearTimeout(__qlTimer);
+  __qlTimer = setTimeout(loginSubmitError, 30000);
+  domFC(domPS(qf)).onload = function() {
+    clearTimeout(__qlTimer);
+    __qlTimer = setTimeout(loginSubmitError, 2500);
+  }
+  return true;
+}
+
+window.loginSubmitError = function() {
+  showFastBox('Предупреждениe', 'Не удаётся пройти авторизацию по защищённому соединению. Чаще всего это происходит, когда на Вашем компьютере установлены неправильные текущие дата и время. Пожалуйста, проверьте настройки даты и времени в системе и перезапустите браузер.');
+}
+window.focusLoginInput = function() {
+  scrollToTop(0);
+  notaBene('quick_email');
+}
+window.changeQuickRegButton = function(noShow) {
+  if (noShow) {
+    hide('top_reg_link', 'quick_reg_button');
+  } else {
+    show('top_reg_link', 'quick_reg_button');
+  }
+  toggle('top_switch_lang', noShow && window.langConfig && window.langConfig.id != 3);
+}
+window.submitQuickLoginForm = function(email, pass, opts) {
+  setQuickLoginData(email, pass, opts);
+  if (opts && opts.prg) prgBtn = opts.prg;
+  if (qf.onsubmit()) qf.submit();
+}
+window.setQuickLoginData = function(email, pass, opts) {
+  if (email !== undefined) ge('quick_email').value = email;
+  if (pass !== undefined) ge('quick_pass').value = pass;
+  var params = opts && opts.params || {};
+  each (params, function(i, v) {
+    var el = ge('quick_' + i) || ge('quick_login_' + i);;
+    if (el) {
+      val(el, params[i]);
+    } else {
+      qf.appendChild(ce('input', {type: 'hidden', name: i, id: 'quick_login_' + i, value: v}));
+    }
+  });
+}
+window.loginByCredential = function() {
+  if (!browserFeatures.cmaEnabled || !window.submitQuickLoginForm || window._loginByCredOffered) return false;
+
+  _loginByCredOffered = true;
+  navigator.credentials.get({
+    password: true,
+    mediation: 'required'
+  }).then(function(cred) {
+    if (cred) {
+      submitQuickLoginForm(cred.id, cred.password);
+      return true;
+    } else {
+      return false;
+    }
+  });
+}
+
+if (qlb) {
+  qlb.onclick = function() { if (qf.onsubmit()) qf.submit(); };
+}
+
+if (browser.opera_mobile) show('quick_expire');
+
+if (1) {
+  hide('support_link_td', 'top_support_link');
+}
+var ts_input = ge('ts_input');
+if (ts_input) {
+  placeholderSetup(ts_input, {back: false, reload: true, phColor: '#8fadc8'});
+}
+TopSearch.init();;window.shortCurrency && shortCurrency();
+window.handlePageParams && handlePageParams({"id":0,"loc":"","noleftmenu":1,"wrap_page":1,"width":960,"width_dec":0,"width_dec_footer":0,"top_home_link_class":"top_home_link fl_l CovidLogo","body_class":"index_page","to":"aW5kZXgucGhw","counters":"","pvbig":0,"pvdark":1});addEvent(document, 'click', onDocumentClick);
+addLangKeys({"global_apps":"Приложения","global_friends":"Друзья","global_communities":"Сообщества","head_search_results":"Результаты поиска","global_chats":"Диалоги","global_show_all_results":"Показать все результаты","global_news_search_results":"Результаты поиска в новостях","global_emoji_cat_recent":"Часто используемые","global_emoji_cat_1":"Эмоции","global_emoji_cat_2":"Животные и растения","global_emoji_cat_3":"Жесты и люди","global_emoji_cat_4":"Еда и напитки","global_emoji_cat_5":"Спорт и активности","global_emoji_cat_6":"Путешествия и транспорт","global_emoji_cat_7":"Предметы","global_emoji_cat_8":"Символы","global_emoji_cat_9":"Флаги","stories_archive_privacy_info":"Истории в архиве видите только Вы","stories_remove_warning":"Вы действительно хотите удалить историю?<br>Отменить действие будет невозможно.","stories_narrative_remove_warning":"Вы действительно хотите удалить сюжет?<br>Отменить действие будет невозможно.","stories_remove_confirm":"Удалить","stories_answer_placeholder":"Ваше сообщение…","stories_answer_sent":"Сообщение отправлено","stories_blacklist_title":"Скрыты из историй","stories_settings":"Настройки","stories_add_blacklist_title":"Скрытие из историй","stories_add_blacklist_message":"Пользователь останется в друзьях, но истории не будут показываться в новостях.","stories_add_blacklist_button":"Скрыть из историй","stories_add_blacklist_message_group":"Вы останетесь подписчиком сообщества, но истории не будут показываться в новостях.","stories_remove_from_blacklist_button":"Вернуть в истории","stories_error_cant_load":"Не удалось загрузить историю.","stories_try_again":"Попробовать ещё раз","stories_error_expired":"Историю можно было посмотреть<br>в течение 24 часов после публикации","stories_error_deleted":"История удалена","stories_error_private":"Автор скрыл историю","stories_error_one_time_seen":"История больше не доступна","stories_mask_tooltip":"Попробовать эту маску","stories_mask_sent":"Маска отправлена на телефон","stories_followed":"Вы подписались&#33;","stories_unfollowed":"Вы отписались","stories_is_ad":"Реклама","stories_private_story":"Приватная<br>история","stories_expired_story":"История<br>истекла","stories_deleted_story":"История<br>удалена","stories_bad_browser":"Истории не поддерживаются в Вашем браузере","stories_delete_all_replies_confirm":"Вы действительно хотите удалить все ответы {name} за последние сутки? <br>Отменить действие будет невозможно.","stories_hide_reply_button":"Скрыть ответ","stories_reply_hidden":"Ответ на историю скрыт.","stories_restore":"Восстановить","stories_hide_reply_continue":"Продолжить просмотр","stories_hide_all_replies":["","Скрыть все его ответы за последние сутки","Скрыть все её ответы за последние сутки"],"stories_reply_add_to_blacklist":"Занести в чёрный список","stories_hide_reply_warning":"Вы действительно хотите скрыть этот ответ?<br>Отменить действие будет невозможно.","stories_replies_more_button":["","Показать ещё %s ответившего","Показать ещё %s ответивших","Показать ещё %s ответивших"],"stories_all_replies_hidden":"Все ответы скрыты","stories_ban_confirm":"Вы действительно хотите добавить в чёрный список {name}?<br>Отменить действие будет невозможно.","stories_banned":"Пользователь в чёрном списке","stories_share":"Поделиться","stories_like":"Нравится","stories_follow":"Подписаться","stories_unfollow":"Отписаться","stories_report":"Пожаловаться","stories_report_sent":"Жалоба отправлена","stories_narrative_show":"Посмотреть cюжет","stories_narrative_bookmark_added":"Сюжет сохранён в {link}закладках{\/link}","stories_narrative_bookmark_deleted":"Сюжет удалён из закладок","stories_narrative_edit_button":"Редактировать сюжет","stories_narrative_add_bookmark_button":"Сохранить в закладках","stories_narrative_remove_bookmark_button":"Удалить из закладок","stories_show_hashtag_link":"Поиск по хештегу","stories_go_to_place":"Перейти к месту","stories_go_to_group":"Открыть сообщество","stories_go_to_profile":"Открыть профиль","stories_go_to_post":"Перейти к записи","stories_go_to_story":"Перейти к истории","stories_share_question":"Поделиться мнением","stories_live_ended_title":"Спасибо за просмотр&#33;","stories_live_ended_desc_club":"Сообщество {name} <br>завершило трансляцию.","stories_live_ended_desc_user":["","{name} завершил трансляцию.","{name} завершила трансляцию."],"stories_live_ended_open_club":"Открыть сообщество","stories_live_ended_open_user":"Открыть профиль","stories_live_ended_watch_next":"Смотреть далее","stories_live_N_watching":["","%s смотрит сейчас","%s смотрят сейчас","%s смотрят сейчас"],"stories_live_chat_msg_too_long":"Сообщение слишком длинное ","stories_questions_title":"Мнения","stories_question_reply":"Ответить","stories_question_reply_error":"Вы не можете отправить сообщение этому пользователю, так как он ограничил круг лиц, которые могут присылать ему сообщения.","stories_question_reply_send":"Отправить","stories_question_reply_placeholder":"Напишите сообщение...","stories_question_delete":"Удалить мнение","stories_question_author_ban":"Заблокировать","stories_question_author_unban":"Разблокировать автора","stories_question_author_blocked":"Автор заблокирован","stories_question_author_unblocked":"Автор разблокирован","stories_question_author_report":"Пожаловаться","stories_question_report_title":"Жалоба на мнение","stories_question_report_send":"Отправить","stories_question_more":"Действия","stories_question_sent":"Вы поделились мнением с {name}","stories_question_reply_box_title":"Сообщение {name}","stories_question_ask_placeholder":"Введите текст...","stories_question_ask_box_title":"Мнение к истории {name}","stories_question_report_reason":"Укажите причину","stories_question_forbidden":"Вы не можете поделиться мнением","stories_audio_add":"Добавить в мою музыку","stories_audio_added":"Аудиозапись добавлена","stories_audio_delete":"Удалить аудиозапись","stories_audio_deleted":"Аудиозапись удалена","stories_audio_next_audio":"Слушать далее","stories_reactions_title":"Быстрые реакции","stories_reactions_tooltip_feature":"Нажмите на поле ввода, чтобы отправить реакцию","stories_go_to_market_item":"Подробнее","stories_market_access_error_title":"Ошибка","stories_market_access_error_text":"Данный товар недоступен","stories_groups_feed_block":"Сообщества","stories_settings_box_tab_all":"Все","stories_settings_box_tab_separately":"Отображаемые отдельно","stories_settings_box_tab_grouped":"Сгруппированные","stories_settings_box_search_placeholder":"Поиск по сообществам","stories_settings_box_put_back":"Отображать последним","stories_groups_grid_title":"Истории сообществ","stories_go_to_app":"Перейти к приложению","stories_groups_grid_text":"Здесь собраны истории сообществ, на которые Вы подписаны","stories_groups_tooltip":"Отмечайте истории, которые хотите видеть в общем списке","stories_settings_saved":"Настройки сохранены","stories_detailed_stats":"Подробная статистика","stories_privacy_feedback_hint":"У вас ограничены настройки приватности, перейдите в настройки, чтобы изменить.","stories_go_to_settings":"Перейти в настройки","stories_stat_counter_off":"выкл","stories_question_select_public":"Публично","stories_question_select_author_only":"Видно только автору","stories_question_select_anonymous":"Анонимно","stories_question_about_user_tooltip":"<b>Публично<\/b><br>{name} сможет указать Ваше имя при публикации мнения.<br><br><b>Имя видно автору<\/b><br>{name} увидит Ваше имя, но не сможет указать его при публикации мнения.<br><br><b>Анонимно<\/b><br>{name} не увидит Ваше имя и не сможет указать его при публикации мнения.","stories_question_about_group_tooltip":"<b>Публично<\/b><br>Руководитель сообщества сможет указать Ваше имя при публикации мнения.<br><br><b>Имя видно автору<\/b><br>Руководитель сообщества увидит Ваше имя, но не сможет указать его при публикации мнения.<br><br><b>Анонимно<\/b><br>Руководитель сообщества не увидит Ваше имя и не сможет указать его при публикации мнения.","stories_question_about_user_tooltip_without_anon":"<b>Публично<\/b><br>{name} сможет указать Ваше имя при публикации мнения.<br><br><b>Имя видно автору<\/b><br>{name} увидит Ваше имя, но не сможет указать его при публикации мнения.","stories_question_about_group_tooltip_without_anon":"<b>Публично<\/b><br>Руководитель сообщества сможет указать Ваше имя при публикации мнения.<br><br><b>Имя видно автору<\/b><br>Руководитель сообщества увидит Ваше имя, но не сможет указать его при публикации мнения.","stories_voting_show_result":"Посмотреть результаты"}, true);
+addLangKeys({"index_to_main":"Главная страница","index_choose_sex":"Укажите пол","index_sel_bday":"День","notifications_native_common_error":"Произошла ошибка при включении уведомлений.","box_close":"Закрыть","captcha_cancel":"Отмена","captcha_enter_code":"Введите код с картинки","captcha_send":"Отправить","global_back":"Назад","global_box_title_back":"Вернуться назад","global_captcha_input_here":"Введите код","global_close":"Закрыть","global_date":["","{day} {month} {year}","вчера","сегодня","завтра"],"global_error":"Ошибка","global_hours_ago":["","%s час назад","%s часа назад","%s часов назад"],"global_just_now":"только что","global_mins_ago":["","%s минуту назад","%s минуты назад","%s минут назад"],"global_recaptcha_title":"Подтверждение действия","global_secs_ago":["","%s секунду назад","%s секунды назад","%s секунд назад"],"global_short_date":["","{day} {month}","вчера","сегодня","завтра"],"global_short_date_time":["","{day} {month} в {hour}:{minute}","вчера в {hour}:{minute}","сегодня в {hour}:{minute}","завтра в {hour}:{minute}"],"global_short_date_time_l":["","{day} {month} в {hour}:{minute}","вчера в {hour}:{minute}","сегодня в {hour}:{minute}","завтра в {hour}:{minute}"],"global_to_top":"Наверх","global_user_is_online":"онлайн","global_user_is_online_mobile":"онлайн с телефона","global_word_hours_ago":["","час назад","два часа назад","три часа назад","четыре часа назад","пять часов назад"],"global_word_mins_ago":["","минуту назад","две минуты назад","три минуты назад","4 минуты назад","5 минут назад"],"global_word_secs_ago":["","только что","две секунды назад","три секунды назад","четыре секунды назад","пять секунд назад"],"months_of":{"1":"января","2":"февраля","3":"марта","4":"апреля","5":"мая","6":"июня","7":"июля","8":"августа","9":"сентября","10":"октября","11":"ноября","12":"декабря"},"months_sm_of":{"1":"янв","2":"фев","3":"мар","4":"апр","5":"мая","6":"июн","7":"июл","8":"авг","9":"сен","10":"окт","11":"ноя","12":"дек"}});
+addTemplates({"_":"_","stickers_sticker_url":"https:\/\/vk.com\/sticker\/1-%id%-%size%"});
+window.cur = window.cur || {};
+cur['emojiHintsSendLogHash']="02a665bd48b606bfb6";
+cur.options = {"bmonths":[[0,"Месяц"],[1,"Января"],[2,"Февраля"],[3,"Марта"],[4,"Апреля"],[5,"Мая"],[6,"Июня"],[7,"Июля"],[8,"Августа"],[9,"Сентября"],[10,"Октября"],[11,"Ноября"],[12,"Декабря"]],"byears":[[0,"Год"],[2006,"2006"],[2005,"2005"],[2004,"2004"],[2003,"2003"],[2002,"2002"],[2001,"2001"],[2000,"2000"],[1999,"1999"],[1998,"1998"],[1997,"1997"],[1996,"1996"],[1995,"1995"],[1994,"1994"],[1993,"1993"],[1992,"1992"],[1991,"1991"],[1990,"1990"],[1989,"1989"],[1988,"1988"],[1987,"1987"],[1986,"1986"],[1985,"1985"],[1984,"1984"],[1983,"1983"],[1982,"1982"],[1981,"1981"],[1980,"1980"],[1979,"1979"],[1978,"1978"],[1977,"1977"],[1976,"1976"],[1975,"1975"],[1974,"1974"],[1973,"1973"],[1972,"1972"],[1971,"1971"],[1970,"1970"],[1969,"1969"],[1968,"1968"],[1967,"1967"],[1966,"1966"],[1965,"1965"],[1964,"1964"],[1963,"1963"],[1962,"1962"],[1961,"1961"],[1960,"1960"],[1959,"1959"],[1958,"1958"],[1957,"1957"],[1956,"1956"],[1955,"1955"],[1954,"1954"],[1953,"1953"],[1952,"1952"],[1951,"1951"],[1950,"1950"],[1949,"1949"],[1948,"1948"],[1947,"1947"],[1946,"1946"],[1945,"1945"],[1944,"1944"],[1943,"1943"],[1942,"1942"],[1941,"1941"],[1940,"1940"],[1939,"1939"],[1938,"1938"],[1937,"1937"],[1936,"1936"],[1935,"1935"],[1934,"1934"],[1933,"1933"],[1932,"1932"],[1931,"1931"],[1930,"1930"],[1929,"1929"],[1928,"1928"],[1927,"1927"],[1926,"1926"],[1925,"1925"],[1924,"1924"],[1923,"1923"],[1922,"1922"],[1921,"1921"],[1920,"1920"],[1919,"1919"],[1918,"1918"],[1917,"1917"],[1916,"1916"],[1915,"1915"],[1914,"1914"],[1913,"1913"],[1912,"1912"],[1911,"1911"],[1910,"1910"],[1909,"1909"],[1908,"1908"],[1907,"1907"],[1906,"1906"],[1905,"1905"],[1904,"1904"],[1903,"1903"],[1902,"1902"]],"proceed_as":true};
+Index.initNew();cur.fbApp = '128749580520227';
+cur.fbState = '58932396dc5c168500';
+cur.fbLocale = 'ru_RU';
+Index.fbCheck(cur.fbApp, '');
+;(function (d, w) {
+if (w.__dev) {
+  return
+}
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);;(function (d, w) {
+if (w.__dev) {
+  return;
+}
+if(!w._tns){w._tns = {}};
+w._tns.tnsPixelSocdem = "13"
+w._tns.tnsPixelType = "unauth"
+})(document, window);
+      window.curReady && window.curReady();
+    }
+  </script>
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>
